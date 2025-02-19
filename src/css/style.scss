@@ -11,7 +11,7 @@ $secondary:#FEDBD3;
 $primary:#FF3F3A;
 body{
     font-family: 'lato',sans-serif;
-    overflow-x: hidden;
+    overflow-x:hidden;
 }
 ul,ol{
     list-style: none;
@@ -816,7 +816,7 @@ main{
     url(/src/images/dots3.png);
     background-repeat: no-repeat;
     background-position: 
-    105% -20%,
+    100% -20%,
     0 100%;
 }
 .events{
@@ -913,7 +913,7 @@ main{
             font-size: 16px;
             line-height: 52px;
             letter-spacing: 0.5px;
-            margin-left: 120px;
+            margin-left: 0;
             transition: .3s;
         }
         & a:hover{
@@ -1061,7 +1061,7 @@ footer{
         flex-direction: column;
         gap: 50px;
         &__title p{
-            max-width: 290px;
+            max-width: 250px;
             font-weight: 400;
             font-size: 12px;
             line-height: 18px;
@@ -1240,11 +1240,171 @@ footer{
     }
 }
 
-// Responsive
-
-@media only screen and (max-width:1440px) {
-    .container{
-        max-width: px;
+//Responsive
+@media only screen and (max-width:1441px) {
+.container{
+    width: 98%;
+    max-width: 1024px;
+}
+.sec-about__info h2 {
+    font-size: 30px;
+}
+.sec-about__info .sai-menu__item {
+    font-size: 12px;
+    line-height: 18px;
+}
+.events{
+    &-main{
+        &__time p{
+            font-size: 5px;
+        }
     }
-    
+}
+.events-main a{
+    margin-left:10px;
+}
+map__first > a,.footer-courses__first > a ,.contact__first > a {
+    font-size: 18px;
+}
+.site-map li > a,.footer-courses li > a,.contact__first > a  {
+    font-size: 14px;
+}
+.contact li {
+    font-weight: 400;
+    font-size: 10px;
+    }
+}
+@media only screen and (max-width:1025px){
+    .container{
+        max-width: 991px;
+        width: 98%;
+    }
+    .certificate-image img {
+        width: 550px;
+    }
+    .sec-about {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 100px;
+    }
+    .nav-tools a:first-child {
+        font-size: 14px;
+    }
+    .nav-info__menu {
+        display: none
+    }
+}
+@media only screen and (max-width:991px){
+    .container{
+        max-width: 768px;
+        width: 94%;
+    }
+    .hero-info h1 {
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 64px;
+            letter-spacing: 1px;
+            max-width: 500px;
+            margin: 30px 0 60px 0;
+        }
+        .sec-about {
+            grid-template-columns: repeat(1, 1fr);
+            padding-bottom: 100px;
+        }
+        .sec-about__info {
+            align-items: center;
+            margin-left: 0;
+        }
+        .courses-main {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .benefits-tools__item {
+            width: 150px;
+            height: 46px;
+        }
+        .benefits-tools span{
+            font-size: 12px;
+        }
+        .benefits-hero{
+            grid-template-columns: repeat(1,1fr);
+
+        }
+        .benefits-hero__info {
+            align-items: center;
+        }
+        .benefits-hero__image{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .events-main a {
+            display: flex;
+            align-items: center;
+            height: 45px;
+            padding: 5px;
+            font-size: 12px;
+            line-height: 26px;
+            transition: 0.3s;
+        }
+        .certificate {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .certificate-image img {
+            position: relative;
+            padding-top: 20px;
+        }
+        .contact-bg{
+            margin: 0;
+            background-size: 150px;
+        }
+        footer {
+            display: none;
+        }
+    }
+@media only screen and (max-width:768px){
+    .container{
+        max-width: 375px;
+    }
+    .nav-tools a:first-child{
+        display: none;
+    }
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        text-align: start;
+    }
+    .stats span{
+        display: none;
+    }
+    .courses-top {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+        & p{
+            text-align: center;
+        }
+
+    }
+    .benefits{
+        display: none;
+    }
+    .events-bg{
+        display: none;
+    }
+    .contact-bg{
+        display: none;
+    }
 }
